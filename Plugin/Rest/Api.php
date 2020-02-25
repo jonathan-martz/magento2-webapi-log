@@ -25,7 +25,7 @@ class Api
     /**
      * @var RequestFactory
      */
-    protected $webapistats;
+    protected $webapilog;
 
     /**
      * @var UrlInterface
@@ -46,20 +46,20 @@ class Api
      * @param UrlInterface $url
      * @param RemoteAddress $remote
      * @param Session $customerSession
-     * @param RequestFactory $webapistats
+     * @param RequestFactory $webapilog
      */
     public function __construct(
         LoggerInterface $logger,
         UrlInterface $url,
         RemoteAddress $remote,
         Session $customerSession,
-        RequestFactory $webapistats
+        RequestFactory $webapilog
     ) {
         $this->logger = $logger;
         $this->url = $url;
         $this->remote = $remote;
         $this->customerSession = $customerSession;
-        $this->webapistats = $webapistats;
+        $this->webapistats = $webapilog;
     }
 
     /**
