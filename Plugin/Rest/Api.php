@@ -73,11 +73,11 @@ class Api
         callable $proceed,
         RequestInterface $request
     ) {
-        $url = str_replace([$this->url->getBaseUrl(), 'rest/V1/'], ['', ''], $this->url->getCurrentUrl());
         $loggedIn = $this->customerSession->isLoggedIn();
         $id = $this->customerSession->getSessionId();
         $ip = $this->remote->getRemoteAddress();
-
+        $url = str_replace([$this->url->getBaseUrl(), 'rest/V1/', 'index.php/'], ['', '', ''], $this->url->getCurrentUrl());
+        
         $model = $this->webapistats->create();
         $data = [
             'url' => str_replace('index.php/', '', $url),
