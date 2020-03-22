@@ -1,6 +1,6 @@
 <?php
 
-namespace JonathanMartz\WebApiLog\Model\ResourceModel;
+namespace JonathanMartz\WebApiLog\Model\ResourceModel\Resource;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
