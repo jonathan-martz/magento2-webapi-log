@@ -18,9 +18,17 @@ class Clear
 
     public function execute()
     {
-        $requestModel = $this->requestFactory->create();
-        get_class($requestModel->getCollection());
-        die('Hallos');
+        $requestFactory = $this->requestFactory->create();
+        $dayStart = strtotime("today", time());
+
+        $collection = $requestFactory->getCollection();
+        $collection->addFieldToFilter('time', array('lt' => $dayStart));
+
+        if(count($collection) > 0){
+            foreach($collection as $key => $item){
+                $item->delete();
+            }
+        }
     }
 }
 
