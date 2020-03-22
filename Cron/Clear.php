@@ -10,15 +10,17 @@ class Clear
     /**
      * @var RequestFactory
      */
-    protected $webapilog;
+    public $requestFactory;
 
-    public function __constructor(RequestFactory $collection){
-        $this->webapistats = $webapilog;
+    public function __construct(RequestFactory $requestFactory){
+        $this->requestFactory = $requestFactory;
     }
 
     public function execute()
     {
-        die('Hallo');
+        $requestModel = $this->requestFactory->create();
+        get_class($requestModel->getCollection());
+        die('Hallos');
     }
 }
 

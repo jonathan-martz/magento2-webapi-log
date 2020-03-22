@@ -10,7 +10,7 @@ class Collection extends AbstractCollection
     {
         $this->_init(
             'JonathanMartz\WebApiLog\Model\Request',
-            'JonathanMartz\WebApiLog\Model\ResourceModel\Resource'
+            'JonathanMartz\WebApiLog\Model\ResourceModel'
         );
     }
 }
