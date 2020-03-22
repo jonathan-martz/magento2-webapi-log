@@ -4,10 +4,10 @@ namespace JonathanMartz\WebApiLog\Model\ResourceModel;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 /**
- * Class Resource
+ * Class Request
  * @package JonathanMartz\WebApiLog\Model\ResourceModel
  */
-class Resource extends AbstractDb
+class Request extends AbstractDb
 {
     /**
      *
