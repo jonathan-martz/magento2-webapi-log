@@ -4,7 +4,7 @@ namespace JonathanMartz\WebApiLog\Model\ResourceModel\Request;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
-class Collection extends AbstractCollecstion
+class Collection extends AbstractCollection
 {
     protected function _construct()
     {

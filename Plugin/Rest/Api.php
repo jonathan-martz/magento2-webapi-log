@@ -88,10 +88,11 @@ class Api
         ];
         $model->addData($data);
         $saveData = $model->save();
+        
         if(!$saveData) {
             $this->logger->alert('Cant add Request: ' . json_encode($data));
         }
-
+        
         return $proceed($request);
     }
 }

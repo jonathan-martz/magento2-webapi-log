@@ -21,6 +21,7 @@ class Clear
         $requestFactory = $this->requestFactory->create();
         $dayStart = strtotime("today", time());
 
+    
         $collection = $requestFactory->getCollection();
         $collection->addFieldToFilter('time', array('lt' => $dayStart));
 
@@ -29,6 +30,7 @@ class Clear
                 $item->delete();
             }
         }
+    
     }
 }
 
