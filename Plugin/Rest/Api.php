@@ -80,7 +80,7 @@ class Api
         
         $model = $this->webapistats->create();
         $data = [
-            'url' => str_replace('index.php/', '', $url),
+            'url' => $url,
             'loggedin' => (int)$loggedIn,
             'session' => $id,
             'ip' => sha1($ip),
