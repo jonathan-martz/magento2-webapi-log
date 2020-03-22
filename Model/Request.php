@@ -14,7 +14,7 @@ class Request extends AbstractModel
      */
     public function _construct()
     {
-        $this->_init("JonathanMartz\WebApiLog\Model\ResourceModel\Resource");
+        $this->_init("JonathanMartz\WebApiLog\Model\ResourceModel\Request");
     }
 }
 
